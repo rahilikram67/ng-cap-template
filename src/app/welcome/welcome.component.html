@@ -1,0 +1,29 @@
+<swiper (init)="init($event)" (slideChange)="slideChanged($event)" (slideChangeTransitionStart)="slide($event)"
+    class="w-full h-full">
+    <ng-template swiperSlide
+        class="flex flex-col justify-center bg-gradient-to-r from-cyan-500 to-blue-500 items-center">
+        <div class="text-2xl mb-10 italic flex h-9 opacity-0 flex-row overflow-hidden font-medium text-slate-100">
+            Welcome to our Book Store
+        </div>
+        <img class="rounded-full w-8/12 h-6/12" src="assets/slides/books1.png" alt="">
+    </ng-template>
+    <ng-template swiperSlide
+        class="flex flex-col justify-center bg-gradient-to-r from-cyan-500 to-blue-500 items-center">
+        <div class="text-2xl mb-10 opacity-0 italic text-wrap font-medium text-slate-100">
+            <span class="block">Books, magzines, and more</span>
+            <span class="block text-center">All at one place</span>
+        </div>
+        <img class="rounded-lg h-[-190px]" src="assets/slides/books2.png" alt="">
+    </ng-template>
+    <ng-template swiperSlide class="flex flex-col justify-center bg-gradient-to-r from-cyan-500 to-blue-500 items-center">
+        <div class="text-2xl mb-10 opacity-0 italic text-wrap font-medium text-slate-100">
+            All Done!
+        </div>
+        <img class="rounded-full bg-white w-8/12 h-6/12" [src]="last" alt="">
+    </ng-template>
+</swiper>
+<div #bullets class="flex items-center justify-center bottom-10 mx-auto left-0 right-0  z-10 absolute">
+    <div class="bullet"></div>
+    <div class="bullet mx-4"></div>
+    <div class="bullet"></div>
+</div>

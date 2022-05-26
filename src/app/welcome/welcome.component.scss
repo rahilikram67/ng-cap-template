@@ -1,0 +1,97 @@
+.bullet {
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.active {
+    animation: activate 1s forwards, bounce 1s forwards;
+
+}
+
+.slide1-text {
+    animation: wifade 2.5s .5s forwards;
+}
+
+.slide2-text {
+    animation: bounceBottom 2.5s .3s forwards;
+}
+
+.slide3-text {
+    animation: righttoleft 1s .3s forwards;
+}
+
+@keyframes activate {
+    from {
+        width: 10px;
+        height: 10px;
+    }
+
+    to {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes wifade {
+    0% {
+        opacity: 0.3;
+        width: 10px;
+    }
+
+    100% {
+        opacity: 1;
+        width: 295px;
+    }
+}
+
+@keyframes bounceBottom {
+    0% {
+        transform: translateY(-300px);
+        opacity: 0;
+        letter-spacing: 2.5px;
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateY(40px);
+        letter-spacing: 1px;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: 0px;
+    }
+}
+
+@keyframes righttoleft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    75%{
+        transform: translateX(-80px);
+        opacity: 0.7; 
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
